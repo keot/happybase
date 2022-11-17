@@ -300,8 +300,8 @@ class Connection(object):
             for option_name, value in six.iteritems(options):
                 kwargs[pep8_to_camel_case(option_name)] = value
 
-            if not cf_name.endswith(':'):
-                cf_name += ':'
+            if not cf_name.endswith(b':'):
+                cf_name += b':'
             kwargs['name'] = cf_name
 
             column_descriptors.append(ColumnDescriptor(**kwargs))
